@@ -852,5 +852,426 @@
 			</class>
 		</package>
 
+		<package name="android/os">
+			<class name="AsyncTask">
+				<method name="execute" descriptor="([Ljava/lang/Object;)Landroid/os/AsyncTask;">
+					<getfield class="[Ljava/lang/Object" field="length"
+						fieldType="I" def="size" ref="arg1" />  
+					<new def="clonedArray" class="[Ljava/lang/Object" size="size" />
+					<call type="static" name="arraycopy"
+						class="Lcom/ibm/wala/model/java/lang/System"
+						descriptor="(Ljava/lang/Object;Ljava/lang/Object;)V" 
+						arg0="arg1"
+						arg1="clonedArray" />
+					<call type="virtual" name="doInBackground"
+						class="Landroid/os/AsyncTask"
+						descriptor="([Ljava/lang/Object;)Ljava/lang/Object;"
+						arg0="arg0" arg1="arg1" />
+					<return value="arg0" />
+				</method>
+				<method name="doInBackground" descriptor="(Landroid/os/AsyncTask;[Ljava/lang/Object;)V">
+				</method>
+			</class>
+		</package>
+		
+		<package name="android/app">
+			<class name="Activity">
+				<method name="&lt;init&gt;" descriptor="()V">
+					<constant name="integer" type="int" value="0" />
+					<constant name="bool" type="boolean" value="false" />
+					<constant name="obj" type="Ljava/lang/Object" value="null" />
+					<call type="virtual" name="onCreate"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/os/Bundle;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onStart"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onStop"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onCreateContextMenu"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V"
+						arg0="arg0" arg1="obj" arg2="obj" arg3="obj" />
+					<call type="virtual" name="onActivityResult"
+						class="Landroid/app/Activity"
+						descriptor="(IILandroid/content/Intent;)V"
+						arg0="arg0" arg1="integer" arg2="integer" arg3="obj" />
+					<call type="virtual" name="onRestoreInstanceState"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/os/Bundle;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onPostCreate"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/os/Bundle;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onRestart"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onResume"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onPostResume"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onNewIntent"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/content/Intent;)V"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onSaveInstanceState"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/os/Bundle;)V"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onPause"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onUserLeaveHint"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onCreateThumbnail"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid.graphics.Bitmap;Landroid.graphics.Canvas;)Z"
+						arg0="arg0" arg1="obj" arg2="obj"/>
+					<call type="virtual" name="onCreateDescription"
+						class="Landroid/app/Activity"
+						descriptor="()Ljava/lang/CharSequence;"
+						arg0="arg0" />
+					<call type="virtual" name="onDestroy"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onConfigurationChanged"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/content/res/Configuration;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onRetainNonConfigurationChildInstances"
+						class="Landroid/app/Activity"
+						descriptor="()Ljava/util/HashMap;"
+						arg0="arg0" />
+					<call type="virtual" name="onLowMemory"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onTrimMemory"
+						class="Landroid/app/Activity"
+						descriptor="(I)V"
+						arg0="arg0" arg1="integer" />
+					<call type="virtual" name="onAttachFragment"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/app/Fragment;)V"
+						arg0="arg0" arg1="obj" />
+					
+					<call type="virtual" name="onKeyDown"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/KeyEvent;)Z"
+						arg0="arg0" arg1="integer" arg2="obj" />
+					<call type="virtual" name="onKeyLongPress"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/KeyEvent;)Z"
+						arg0="arg0" arg1="integer" arg2="obj" />
+					<call type="virtual" name="onKeyUp"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/KeyEvent;)Z"
+						arg0="arg0" arg1="integer" arg2="obj" />
+					<call type="virtual" name="onKeyMultiple"
+						class="Landroid/app/Activity"
+						descriptor="(IILandroid/view/KeyEvent;)Z"
+						arg0="arg0" arg1="integer" arg2="integer" arg3="obj" />
+					<call type="virtual" name="onBackPressed"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onKeyShortcut"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/KeyEvent;)Z"
+						arg0="arg0" arg1="integer" arg2="obj"/>
+					<call type="virtual" name="onTouchEvent"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/MotionEvent;)Z"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onTrackballEvent"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/MotionEvent;)Z"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onGenericMotionEvent"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/MotionEvent;)Z"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onUserInteraction"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onWindowAttributesChanged"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/WindowManager$LayoutParams;)V"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onContentChanged"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onWindowFocusChanged"
+						class="Landroid/app/Activity"
+						descriptor="(Z)V"
+						arg0="arg0" arg1="bool" />
+					<call type="virtual" name="onAttachedToWindow"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onDetachedFromWindow"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onCreatePanelView"
+						class="Landroid/app/Activity"
+						descriptor="(I)Landroid/view/View;"
+						arg0="arg0" arg1="integer"/>
+					<call type="virtual" name="onCreatePanelView"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/Menu;)Z"
+						arg0="arg0" arg1="integer" arg2="obj"/>
+					<call type="virtual" name="onPreparePanel"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/View;Landroid/view/Menu;)Z"
+						arg0="arg0" arg1="integer" arg2="obj" arg3="obj"/>
+					<call type="virtual" name="onMenuOpened"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/Menu;)Z"
+						arg0="arg0" arg1="integer" arg2="obj"/>
+					<call type="virtual" name="onMenuItemSelected"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/MenuItem;)Z"
+						arg0="arg0" arg1="integer" arg2="obj"/>
+					<call type="virtual" name="onPanelClosed"
+						class="Landroid/app/Activity"
+						descriptor="(ILandroid/view/Menu;)V"
+						arg0="arg0" arg1="integer" arg2="obj"/>
+					<call type="virtual" name="onPrepareOptionsMenu"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/Menu;)Z"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onOptionsItemSelected"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/MenuItem;)Z"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onNavigateUp"
+						class="Landroid/app/Activity"
+						descriptor="()Z"
+						arg0="arg0" />
+					<call type="virtual" name="onNavigateUpFromChild"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/app/Activity;)Z"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onCreateNavigateUpTaskStack"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/app/TaskStackBuilder;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onPrepareNavigateUpTaskStack"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/app/TaskStackBuilder;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onOptionsMenuClosed"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/Menu;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onCreateContextMenu"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V"
+						arg0="arg0" arg1="obj" arg2="obj" arg3="obj"/>
+					<call type="virtual" name="onContextItemSelected"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/MenuItem;)Z"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onContextMenuClosed"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/Menu;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onSearchRequested"
+						class="Landroid/app/Activity"
+						descriptor="()Z"
+						arg0="arg0" />
+					<call type="virtual" name="onApplyThemeResource"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/content/res/Resources$Theme;IZ)V"
+						arg0="arg0" arg1="obj" arg2="integer" arg3="bool"/>
+					<call type="virtual" name="onTitleChanged"
+						class="Landroid/app/Activity"
+						descriptor="(Ljava/lang/CharSequence;I)V"
+						arg0="arg0" arg1="obj" arg2="integer"/>
+					<call type="virtual" name="onChildTitleChanged"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/app/Activity;Ljava/lang/CharSequence;)V"
+						arg0="arg0" arg1="obj" arg2="obj"/>
+					<call type="virtual" name="onCreateView"
+						class="Landroid/app/Activity"
+						descriptor="(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;"
+						arg0="arg0" arg1="obj" arg2="obj" arg3="obj"/>
+					<call type="virtual" name="onCreateView"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;"
+						arg0="arg0" arg1="obj" arg2="integer" arg3="obj" arg4="obj"/>
+					<call type="virtual" name="onWindowStartingActionMode"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onActionModeStarted"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/ActionMode;)V"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onActionModeFinished"
+						class="Landroid/app/Activity"
+						descriptor="(Landroid/view/ActionMode;)V"
+						arg0="arg0" arg1="obj"/>
+				</method>
+			</class>
+			<class name="ListActivity">
+				<method name="&lt;init&gt;" descriptor="()V">
+					<constant name="integer" type="int" value="0" />
+					<constant name="longinteger" type="long" value="0" />
+					<constant name="bool" type="boolean" value="false" />
+					<constant name="obj" type="Ljava/lang/Object" value="null" />
+					<call type="virtual" name="onListItemClick"
+						class="Landroid/app/ListActivity"
+						descriptor="(Landroid/widget/ListView;Landroid/view/View;IJ)V"
+						arg0="arg0" arg1="obj" arg2="obj" arg3="integer" arg4="longinteger" />
+					<call type="special" name="&lt;init&gt;"
+						class="Landroid/app/Activity"
+						descriptor="()V"
+						arg0="arg0" />
+				</method>
+			</class>
+			<class name="Application">
+				<method name="&lt;init&gt;" descriptor="()V">
+					<constant name="integer" type="int" value="0" />
+					<constant name="bool" type="boolean" value="false" />
+					<constant name="obj" type="Ljava/lang/Object" value="null" />
+					<call type="virtual" name="onCreate"
+						class="Landroid/app/Application"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onConfigurationChanged"
+						class="Landroid/app/Application"
+						descriptor="(Landroid/content/res/Configuration;)V"
+						arg0="arg0" arg1="obj"/>
+					<call type="virtual" name="onLowMemory"
+						class="Landroid/app/Application"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onTerminate"
+						class="Landroid/app/Application"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onTrimMemory"
+						class="Landroid/app/Application"
+						descriptor="(I)V"
+						arg0="arg0" arg1="integer" />
+				</method>
+			</class>
+			<class name="Service">
+				<method name="&lt;init&gt;" descriptor="()V">
+					<constant name="integer" type="int" value="0" />
+					<constant name="bool" type="boolean" value="false" />
+					<constant name="obj" type="Ljava/lang/Object" value="null" />
+					<call type="virtual" name="onCreate"
+						class="Landroid/app/Service"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onStart"
+						class="Landroid/app/Service"
+						descriptor="(Landroid/content/Intent;I)V"
+						arg0="arg0" arg1="obj" arg2="integer" />
+					<call type="virtual" name="onStartCommand"
+						class="Landroid/app/Service"
+						descriptor="(Landroid/content/Intent;II)I"
+						arg0="arg0" arg1="obj" arg2="integer" arg3="integer" />
+					<call type="virtual" name="onDestroy"
+						class="Landroid/app/Service"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onConfigurationChanged"
+						class="Landroid/app/Service"
+						descriptor="(Landroid/content/res/Configuration;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onLowMemory"
+						class="Landroid/app/Service"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onTrimMemory"
+						class="Landroid/app/Service"
+						descriptor="(I)V"
+						arg0="arg0" arg1="integer" />
+					<call type="virtual" name="onBind"
+						class="Landroid/app/Service"
+						descriptor="(Landroid/content/Intent;)Landroid/os/IBinder;"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onUnbind"
+						class="Landroid/app/Service"
+						descriptor="(Landroid/content/Intent;)Z"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onRebind"
+						class="Landroid/app/Service"
+						descriptor="(Landroid/content/Intent;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="onTaskRemoved"
+						class="Landroid/app/Service"
+						descriptor="(Landroid/content/Intent;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="run"
+						class="Landroid/app/Service"
+						descriptor="()V"
+						arg0="arg0" />
+				</method>
+			</class>
+		</package>
+		
+		<package name="android/view">
+			<class name="View">
+				<method name="&lt;init&gt;" descriptor="(Landroid/content/Context;)V">
+					<constant name="integer" type="int" value="0" />
+					<constant name="bool" type="boolean" value="false" />
+					<constant name="obj" type="Ljava/lang/Object" value="null" />
+					<call type="virtual" name="onMeasure"
+						class="Landroid/view/View"
+						descriptor="(II)V"
+						arg0="arg0" arg1="integer" arg2="integer"/>
+					<call type="virtual" name="onTouchEvent"
+						class="Landroid/view/View"
+						descriptor="(Landroid/view/MotionEvent;)Z"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="draw"
+						class="Landroid/view/View"
+						descriptor="(Landroid/graphics/Canvas;)V"
+						arg0="arg0" arg1="obj" />
+					<call type="virtual" name="computeScroll"
+						class="Landroid/view/View"
+						descriptor="()V"
+						arg0="arg0" />
+					<call type="virtual" name="onDraw"
+						class="Landroid/view/View"
+						descriptor="(Landroid/graphics/Canvas;)V"
+						arg0="arg0" arg1="obj" />
+				</method>
+			</class>
+		</package>			
+		
+		<package name="android/os">
+			<class name="Handler">
+				<method name="&lt;init&gt;" descriptor="()V">
+					<constant name="obj" type="Ljava/lang/Object" value="null" />
+					<call type="virtual" name="handleMessage"
+						class="Landroid/os/Handler"
+						descriptor="(Landroid/os/Message;)V"
+						arg0="arg0" arg1="obj" />
+				</method>
+			</class>
+		</package>
+		
 	</classloader>
 </summary-spec>

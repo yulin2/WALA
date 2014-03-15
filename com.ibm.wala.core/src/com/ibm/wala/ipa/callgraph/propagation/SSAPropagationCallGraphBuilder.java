@@ -1504,19 +1504,19 @@ public abstract class SSAPropagationCallGraphBuilder extends PropagationCallGrap
     // }
     // } else {
     // generate contraints from parameter passing
-    int nUses = instruction.getNumberOfParameters();
-    int nExpected = target.getMethod().getNumberOfParameters();
+//    int nUses = instruction.getNumberOfParameters();
+//    int nExpected = target.getMethod().getNumberOfParameters();
 
     /*
      * int nExpected = target.getMethod().getReference().getNumberOfParameters(); if (!target.getMethod().isStatic() &&
      * !target.getMethod().isClinit()) { nExpected++; }
      */
 
-    if (nUses != nExpected) {
+//    if (nUses != nExpected) {
       // some sort of unverifiable code mismatch. give up.
-      return;
-    }
-
+//      return;
+//    }
+    
     // we're a little sloppy for now ... we don't filter calls to
     // java.lang.Object.
     // TODO: we need much more precise filters than cones in order to handle
